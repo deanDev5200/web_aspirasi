@@ -94,12 +94,20 @@ const Admin = () => {
               Kelola dan review semua aspirasi yang masuk
             </p>
           </div>
-          <button
-            onClick={handleLogout}
-            className="btn-secondary"
-          >
-            Logout
-          </button>
+          <div className="flex space-x-3">
+            <button
+              onClick={() => navigate('/change-password')}
+              className="btn-secondary"
+            >
+              Ubah Password
+            </button>
+            <button
+              onClick={handleLogout}
+              className="btn-secondary"
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         <div className="card mb-6">

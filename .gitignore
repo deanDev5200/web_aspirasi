@@ -108,3 +108,6 @@ temp/
 
 # MongoDB local data
 data/db/
+
+# Server data directory (contains admin credentials)
+server/data/

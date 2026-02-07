@@ -17,7 +17,7 @@ const Login = () => {
     setIsLoading(true)
 
     try {
-      const result = login(username, password)
+      const result = await login(username, password)
       if (result.success) {
         navigate('/admin')
       } else {
@@ -100,12 +100,6 @@ const Login = () => {
             </div>
           </div>
         </form>
-        
-        <div className="text-center">
-          <p className="text-xs text-gray-500">
-            Default: username <span className="font-mono bg-gray-100 px-1 rounded">admin</span> / password <span className="font-mono bg-gray-100 px-1 rounded">admin123</span>
-          </p>
-        </div>
       </div>
     </div>
   )

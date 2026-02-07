@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const aspirasiRoutes = require('./routes/aspirasi')
+const authRoutes = require('./routes/auth')
 
 dotenv.config()
 
@@ -18,6 +19,7 @@ app.use(express.json())
 
 // Routes
 app.use('/api/aspirasi', aspirasiRoutes)
+app.use('/api/auth', authRoutes)
 
 // Database connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/aspirasi_db')

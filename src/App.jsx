@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Admin from './pages/Admin'
 import Login from './pages/Login'
+import ChangePassword from './pages/ChangePassword'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AspirasiProvider } from './context/AspirasiContext'
 import { AuthProvider } from './context/AuthContext'
@@ -17,6 +18,11 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/change-password" element={
+                <ProtectedRoute>
+                  <ChangePassword />
+                </ProtectedRoute>
+              } />
               <Route path="/admin" element={
                 <ProtectedRoute>
                   <Admin />

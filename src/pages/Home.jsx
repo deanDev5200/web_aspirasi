@@ -104,7 +104,7 @@ const Home = () => {
                 value={formData.kelas}
                 onChange={handleChange}
                 className="input-field"
-                placeholder="Contoh: XII IPA 1"
+                placeholder="Contoh: XI TJKT 1"
                 disabled={formData.isAnonymous}
               />
             </div>
